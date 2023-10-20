@@ -8,14 +8,16 @@ First, download the pre-trained weights:
 
 Then, you can run predictions:
 
-    cog predict -i prompt="Generate a coco-style caption." -i image=@bus.png
+    cog predict -i prompt="What is the highest life expectancy at birth of male?" -i image=@chart.png
 
 ## Example:
 
-Input:
+Input
 
-"Generate a coco-style caption."
+"What is the highest life expectancy at birth of male?"
 
-Output:
+![alt text](chart.png)
 
-"A bus parked on the side of a road."
+Output
+
+The life expectancy at birth of males in 2018 is 80.7.
