@@ -1,0 +1,16 @@
+# Configuration for Cog
+build:
+  gpu: true
+  python_version: "3.10"
+  python_packages:
+    - "torch==2.0.1"
+    - "torchvision"
+    - "accelerate"
+    - "xformers"
+
+  run:
+    - git clone https://github.com/huggingface/transformers.git
+    - cd transformers && git fetch origin pull/26911/head:pr-26911 && git switch pr-26911 && pip install .
+
+# predict.py defines how predictions are run on your model
+predict: "predict.py:Predictor"
